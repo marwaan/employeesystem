@@ -1,0 +1,65 @@
+<div class="panel ">
+    <table class="table ">
+        <thead>
+        <h2>Reward Details</h2>
+        <a href="/reward/create">
+            <button type="button" class="btn btn-primary"style="padding: 8px 31px 6px 30px; float: right;">Add</button>
+        </a>
+        <tr>
+            <th>Reward_ID</th>
+            <th>First Name</th>
+            <th>Bones</th>
+            <th>Sallery</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody style="background-color:#fff;">
+        <tr v-for = "RWD in reward">
+            <td>
+                {{RWD.ID}}
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="name"  v-model="RWD.name" >
+
+                </div>
+                <div v-else>
+                    <p>{{RWD.name}}</p>
+                </div>
+
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="bones"  v-model="RWD.bones" >
+
+                </div>
+                <div v-else>
+                    <p>{{RWD.bones}}</p>
+                </div>
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="sallery"  v-model="RWD.sallery" >
+
+                </div>
+                <div v-else>
+                    <p>{{RWD.sallery}}</p>
+                </div>
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <button v-on:click="save($index)" type="submit" class="btn btn-primary" style="padding: 1px 38px 3px 38px;">Save</button>
+                </div>
+                <div v-else>
+                    <button v-on:click="isEditing()" type="button" class="btn btn-primary" style="padding: 1px 38px 3px 38px;">Edit</button>
+                </div>
+
+            </td>
+            <td>
+                <button onClick="window.location.reload()" v-on:click="deleted($index)" type="button" class="btn btn-danger"style="padding: 1px 38px 3px 38px;">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

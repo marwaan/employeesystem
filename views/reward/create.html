@@ -1,0 +1,22 @@
+{%extends "layout/user.html"%}
+{%block content%}
+<div style="width:60%" class="panel">
+    <div class="panel-body">
+        <form action="/reward/create" method="post">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" name="name" placeholder="firstname">
+            </div>
+            <div class="form-group">
+                <label>Bones</label>
+                <input type="text" class="form-control" name="bones" placeholder="Bones">
+            </div>
+            <div class="form-group">
+                <label>Sallery</label>
+                <input type="text" class="form-control" name="sallery" placeholder="Sallery">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
+{%endblock%}

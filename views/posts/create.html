@@ -1,0 +1,22 @@
+{%extends "layout/user.html"%}
+{%block content%}
+<div style="width:60%" class="panel">
+    <div class="panel-body">
+        <form action="/create" method="post">
+            <div class="form-group">
+                <label>First Name</label>
+                <input type="text" class="form-control" name="first_name" placeholder="firstname">
+            </div>
+            <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" class="form-control" name="last_name" placeholder="lastname">
+            </div>
+            <div class="form-group">
+                <label>Martial Status</label>
+                <textarea class="form-control" name="martailstatus" placeholder="martailstatus"></textarea>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
+{%endblock%}

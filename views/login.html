@@ -1,0 +1,21 @@
+{%extends "layout/auth.html"%}
+
+{%block content%}
+<form action="/login" method="post" >
+   <div class="table-bordered" style=" margin-bottom: 20px">
+    <h1 style="text-align: center;">Login form</h1>
+</div>
+    <div class="form-group">
+        <label >Email address</label>
+        <input type="email" class="form-control" name="email" placeholder="Email">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn btn-primary"style="padding: 8px 31px 6px 30px;">Login</button>
+    <a href="/register">
+        <button type="button" class="btn btn-primary"style="padding: 8px 31px 6px 30px;">SignUp</button>
+    </a>
+</form>
+{%endblock%}

@@ -1,0 +1,28 @@
+(function(){
+    SystemJS.config({
+        baseURL: '/public/scripts',
+        map:{
+            vue:"vue.js",
+            moment:"moment.js",
+            vueResource:"vueResourceConfig.js",
+            text:"text.js"
+        },
+        packages:{
+           "components/employee":{
+               main:"main.js"
+           },
+            "components/payoff":{
+                main:"main.js"
+            },
+            "components/reward":{
+                main:"main.js"
+            },
+            "components/activity":{
+                main:"main.js"
+            },
+            "components/updateactivity":{
+                main:"main.js"
+            }
+        }
+    });
+})();

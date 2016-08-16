@@ -1,0 +1,18 @@
+{%extends "layout/user.html"%}
+{%block content%}
+<div style="width:60%" class="panel">
+    <div class="panel-body">
+        <form action="/payoff/create" method="post">
+            <div class="form-group">
+                <label>Emp_FirstName</label>
+                <input type="text" class="form-control" name="emp_firstName" placeholder="firstname">
+            </div>
+            <div class="form-group">
+                <label>Monthly sallery</label>
+                <input type="text" class="form-control" name="monthly_salary" placeholder="sallery">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
+{%endblock%}

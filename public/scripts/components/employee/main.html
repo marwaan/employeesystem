@@ -1,0 +1,64 @@
+<div class="panel ">
+    <table class="table ">
+        <thead>
+        <h2>Employee Details</h2>
+        <a href="/employee/create">
+            <button type="button" class="btn btn-primary"style="padding: 8px 31px 6px 30px; float: right;">Add</button>
+        </a>
+        <tr>
+            <th>Emp_ID</th>
+            <th>First Name</th>
+            <th>LastName</th>
+            <th>Martial Status</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody style="background-color:#fff;">
+        <tr v-for = "emp in employee">
+            <td>{{emp.id}}</td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="first_name"  v-model="emp.first_name" >
+
+                </div>
+                <div v-else>
+                    <p>{{emp.first_name}}</p>
+                </div>
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="last_name"  v-model="emp.last_name" >
+
+                </div>
+                <div v-else>
+                    <p>{{emp.last_name}}</p>
+                </div>
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="martialstatus"  v-model="emp.martialstatus" >
+
+                </div>
+                <div v-else>
+                    <p>{{emp.martialstatus}}</p>
+                </div>
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <button v-on:click="save($index)" type="submit" class="btn btn-primary" style="padding: 1px 38px 3px 38px;">Save</button>
+                </div>
+                <div v-else>
+                    <button v-on:click="isEditing()" type="button" class="btn btn-primary" style="padding: 1px 38px 3px 38px;">Edit</button>
+                </div>
+
+            </td>
+            <td>
+                <button onClick="window.location.reload()" v-on:click="deleted($index)" type="button" class="btn btn-danger"style="padding: 1px 38px 3px 38px;">Delete</button>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+
+</div>

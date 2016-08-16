@@ -1,0 +1,38 @@
+{
+  "name": "learnnodejs",
+  "version": "1.0.0",
+  "description": "learn node js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marwaan/testproject.git"
+  },
+  "keywords": [
+    "Node",
+    "Js"
+  ],
+  "author": "safarifone",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marwaan/testproject/issues"
+  },
+  "homepage": "https://github.com/marwaan/testproject#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.14.0",
+    "nunjucks": "^2.4.2",
+    "request": "^2.74.0"
+  },
+  "devDependencies": {
+    "bower-main": "^0.2.14",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-dest-clean": "^0.5.0"
+  }
+}

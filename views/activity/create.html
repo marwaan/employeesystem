@@ -1,0 +1,15 @@
+{%extends "layout/user.html"%}
+{%block content%}
+<div style="width:60%" class="panel">
+    <div class="panel-body">
+        <form action="/activity/create" method="post">
+            <div class="form-group">
+                <label>Discription</label>
+                <input type="text" class="form-control" name="discription" placeholder="discription">
+            </div>
+
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
+{%endblock%}

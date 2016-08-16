@@ -1,0 +1,30 @@
+{
+  "name": "learnnodejs",
+  "description": "learn node js",
+  "main": "index.js",
+  "authors": [
+    "safarifone"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "NodeJs"
+  ],
+  "homepage": "https://github.com/marwaan/testproject",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "fontawesome#^4.6.3",
+    "vue": "^1.0.26",
+    "system.js": "^0.19.35",
+    "systemjs-plugin-text": "^0.0.2",
+    "vue-resource": "^0.9.3",
+    "moment": "^2.14.1"
+  },
+  "devDependencies": {}
+}

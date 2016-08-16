@@ -1,0 +1,53 @@
+<div class="panel ">
+    <table class="table ">
+        <thead>
+        <h2>Payoff Details</h2>
+        <a href="/payoff/create">
+            <button type="button" class="btn btn-primary"style="padding: 8px 31px 6px 30px; float: right;">Add</button>
+        </a>
+        <tr>
+            <th>Payoff_ID</th>
+            <th>Emp_firstName</th>
+            <th>Monthly Sallery</th>
+            <th>Action</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody style="background-color:#fff;">
+        <tr v-for = "pay in Payoff">
+            <td>
+                {{pay.id}}
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="emp_firstName"  v-model="pay.emp_firstName" >
+
+                </div>
+                <div v-else>
+                    <p>{{pay.emp_firstName}}</p>
+                </div>
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <input type="text" class="form-control" name="monthly_salary"  v-model="pay.monthly_salary" >
+
+                </div>
+                <div v-else>
+                    <p>{{pay.monthly_salary}}</p>
+                </div>
+            </td>
+            <td>
+                <div v-if="Editing">
+                    <button v-on:click="save($index)" type="submit" class="btn btn-primary" style="padding: 1px 38px 3px 38px;">Save</button>
+                </div>
+                <div v-else>
+                    <button v-on:click="isEditing()" type="button" class="btn btn-primary" style="padding: 1px 38px 3px 38px;">Edit</button>
+                </div>
+            </td>
+            <td>
+                <button onClick="window.location.reload()" v-on:click="deleted($index)" type="button" class="btn btn-danger"style="padding: 1px 38px 3px 38px;">Delete</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
